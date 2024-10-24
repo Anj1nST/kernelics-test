@@ -1,0 +1,57 @@
+@use "src/globals";
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 74px;
+
+  &__button--fullwidth {
+    width: 100%;
+  }
+
+  &__input {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    align-items: center;
+    border-radius: 8px;
+    background-color: globals.$primary-background;
+
+    padding: 18px 22px;
+  }
+
+  &__input-field {
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+
+  &__icon {
+    margin-right: 15px;
+  }
+
+  &__divider {
+    height: 24px;
+    width: 0.5px;
+    margin: 0 20px;
+    background-color: globals.$gray;
+  }
+
+  &__drowdown-chevron {
+    transform: rotate(180deg);
+  }
+
+  @media screen and (min-width: 720px) {
+    flex-direction: row;
+
+    &__button--fullwidth {
+      width: unset;
+    }
+
+    &__input {
+      width: unset;
+    }
+  }
+}

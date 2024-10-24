@@ -1,0 +1,58 @@
+@use "src/globals";
+
+.card {
+  display: flex;
+  gap: 22px;
+  border-radius: 8px;
+  padding: 24px 20px;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 2px 12px 0px;
+  background-color: globals.$primary-background;
+
+  &__photo-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+
+  &__photo {
+    position: absolute;
+    object-fit: cover;
+    width:100%;
+    height: 100%;
+  }
+
+  &__info {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__name {
+    margin-bottom: 12px;
+  }
+
+  &__status-select-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 1px solid globals.$lightBorder;
+    padding-bottom: 5px;
+  }
+
+  &__status-select {
+    appearance: none;
+    border: none;
+    outline: none;
+  }
+
+  &__status-chevron {
+    margin-left: auto;
+  }
+}
+
+.card:hover {
+  box-shadow: globals.$fade 0px 7px 29px 0px;
+}

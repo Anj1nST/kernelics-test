@@ -1,0 +1,34 @@
+@use "src/globals";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  &--sm {
+    padding: 8px 30px;
+  }
+
+  &--lg {
+    padding: 17px 30px 20px 35px;
+  }
+
+  &--filled {
+    border: none;
+    color: globals.$primary-background;
+    background-color: globals.$accent;
+  }
+
+  &--outlined {
+    border: 2px solid globals.$accent;
+    background-color: globals.$primary-background;
+    color: globals.$accent;
+  }
+}

@@ -1,0 +1,49 @@
+@use "src/globals";
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: inherit;
+  gap: 5px;
+  text-wrap: nowrap;
+
+  &--underscored {
+    border-bottom: 1px solid globals.$lightBorder;
+    padding-bottom: 5px;
+  }
+
+  &__button {
+    border: none;
+    outline: none;
+    background-color: inherit;
+  }
+
+  &__chevron {
+    margin-left: auto;
+  }
+
+  &__chevron--expanded {
+    transform: rotate(180deg);
+  }
+
+  &__options-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    top: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    list-style: none;
+    background-color: globals.$primary-background;
+  }
+
+  &__option {
+    cursor: pointer;
+
+    &:hover {
+      background-color: globals.$gray;
+    }
+  }
+}

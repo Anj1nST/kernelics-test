@@ -1,0 +1,25 @@
+@use 'src/globals';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding: 14px 22px;
+  background-color: globals.$primary-background;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 30px 40px 0;
+  background-color: globals.$background;
+
+  @media screen and (min-width: 1366px) {
+    padding: 30px 170px 0;
+  }
+
+  &--loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,16 @@
+@use "src/globals";
+
+.employees {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 38px;
+  row-gap: 49px;
+
+  @media screen and (min-width: 720px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1366px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
